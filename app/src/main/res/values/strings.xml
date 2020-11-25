@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">iRate</string>
+
+    <string name="reporter">Enter a valid Reporter</string>
+    <string name="restaurant_name">Enter a valid Restaurant name</string>
+    <string name="restaurant_Type">Enter a valid Restaurant type</string>
+    <string name="price">Enter average meal price per person</string>
+</resources>

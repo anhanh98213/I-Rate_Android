@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdfbfc"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f46169"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Feedback"
+            android:textColor="@android:color/white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:textStyle="bold"
+                android:text="Reporter: "
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/reporter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:textStyle="bold"
+                android:text="Restaurant Name:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/restaurant_Name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:textStyle="bold"
+                android:text="Restaurant type:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/restaurant_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:textStyle="bold"
+                android:text="Date and time of the visit:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/time_visit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:padding="10dp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="date"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:textStyle="bold"
+                android:text="Average meal price per person:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:textStyle="bold"
+                android:text="Notes:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text|textMultiLine"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:textStyle="bold"
+                    android:text="Food Quality Rating:"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp" />
+
+                <RatingBar
+                    android:id="@+id/food_quality_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:saveEnabled="true"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar"
+                    android:progressTint="#f46169"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:textStyle="bold"
+                    android:text="Cleanliness Rating:"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp" />
+
+                <RatingBar
+                    android:id="@+id/cleanliness_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:saveEnabled="true"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar"
+                    android:progressTint="#f46169"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:textStyle="bold"
+                    android:text="Service Rating:"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp" />
+
+                <RatingBar
+                    android:id="@+id/service_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:saveEnabled="true"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar"
+                    android:progressTint="#f46169"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/button"
+                android:text="Add Feedback"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
